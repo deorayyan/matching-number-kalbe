@@ -6,7 +6,6 @@ export default function Main() {
   const [isFinished, setIsFinished]     = React.useState(false)
   const [cards, setCards]               = React.useState([])
   const numbers                         = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-  // const numbers                         = [0, 1, 2, 3, 4]
 
   const shuffleCards = cards => {
     const cardWithProps = cards.map((card) => {
@@ -36,7 +35,6 @@ export default function Main() {
 
   const flipCard = index => {
     if ( !cards[index].opened && !flippedCards.includes(index) && flippedCards.length < 2 ) {
-      console.log('test')
       setFlippedCards([...flippedCards, index])
     }
   }
